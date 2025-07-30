@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Login/Signup Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="toggle-container">
+                <div class="toggle">
+                    <div class="toggle-panel toggle-left">
+                        <h1>Welcome Back!</h1>
+                        <p>Enter your personal details to use all site features</p>
+                        <button class="hidden" id="login">Sign In</button>
+                    </div>
+                    <div class="toggle-panel toggle-right">
+                        <h1>Hello, Friend!</h1>
+                        <p>Register with your personal details to use all site features</p>
+                        <button class="hidden" id="register">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrapper">
+                <!-- Login Form -->
+                <form class="form" id="loginForm">
+                    <h2>Login Account</h2>
+                    <div class="input-group">
+                        <input type="email" id="loginEmail" required>
+                        <label for="loginEmail">Email</label>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="loginPassword" required>
+                        <label for="loginPassword">Password</label>
+                        <i class="fas fa-lock"></i>
+                        <span class="eye" onclick="togglePassword('loginPassword', this)">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Remember me</label>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                    <button type="submit" class="btn">Sign In</button>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-google"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </form>
+
+                <!-- Signup Form -->
+                <form class="form" id="registerForm">
+                    <h2>Create Account</h2>
+                    <div class="input-group">
+                        <input type="text" id="registerName" required>
+                        <label for="registerName">Username</label>
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" id="registerEmail" required>
+                        <label for="registerEmail">Email</label>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerPassword" required>
+                        <label for="registerPassword">Password</label>
+                        <i class="fas fa-lock"></i>
+                        <span class="eye" onclick="togglePassword('registerPassword', this)">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <div class="input-group">
+                        <input type="password" id="registerConfirmPassword" required>
+                        <label for="registerConfirmPassword">Confirm Password</label>
+                        <i class="fas fa-lock"></i>
+                        <span class="eye" onclick="togglePassword('registerConfirmPassword', this)">
+                            <i class="fas fa-eye"></i>
+                            <i class="fas fa-eye-slash"></i>
+                        </span>
+                    </div>
+                    <label class="terms"><input type="checkbox" required> I agree to the <a href="#">Terms & Conditions</a></label>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
